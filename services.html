@@ -1,1 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onke's Laundry - Services & Pricing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+    :root { --pink:#e91e7b; --navy:#0a2342; --bg:#f7f9ff; }
+    body { background:var(--bg); color:var(--navy); }
+    nav {
+      display:flex; justify-content:space-between; align-items:center;
+      padding:12px 4%; background:#fff; position:sticky; top:0; z-index:99;
+      box-shadow:0 2px 10px rgba(0,0,0,.06);
+    }
+    nav img { height:42px; }
+    .links { display:flex; gap:20px; font-size:13px; }
+    .links a { text-decoration:none; color:#333; font-weight:500; }
+    .links a.active { color:var(--pink); border-bottom:2px solid var(--pink); }
+    .btn {
+      background:var(--pink); color:#fff; padding:11px 20px;
+      border-radius:999px; text-decoration:none; font-weight:700; font-size:13px;
+    }
+    .header { text-align:center; padding:40px 4%; background:#fff; }
+    .grid {
+      display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:18px; padding:20px 4% 40px;
+    }
+    .service-card {
+      background:#fff; border-radius:16px; overflow:hidden;
+      box-shadow:0 6px 18px rgba(0,0,0,.06); padding-bottom:16px;
+    }
+    .service-card img { width:100%; height:180px; object-fit:cover; }
+    .service-card .content { padding:14px 16px; }
+    .price { color:var(--pink); font-weight:800; font-size:20px; }
+    .tag { background:var(--bg); padding:4px 10px; border-radius:999px; font-size:11px; font-weight:600; }
+    footer {
+      background:var(--navy); color:#fff; padding:24px 4%;
+      display:flex; justify-content:space-between; flex-wrap:wrap; font-size:12px; gap:12px;
+    }
+    @media(max-width:800px){ .links { display:none; } }
+  </style>
+</head>
+<body>
 
+  <nav>
+    <img src="logo.png" alt="Onke's Laundry">
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a class="active" href="services.html">Services & Pricing</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <a class="btn" href="https://wa.me/27XXXXXXXXX">💬 WhatsApp</a>
+  </nav>
+
+  <div class="header">
+    <small style="letter-spacing:3px; font-weight:700; color:var(--pink);">WHAT WE DO</small>
+    <h1 style="font-size:36px; font-weight:800;">Our Services & Pricing</h1>
+    <p style="font-size:13px; color:#666; max-width:600px; margin:8px auto;">
+      Professional care for every item. Affordable, transparent, no hidden fees.
+      Free collection & delivery in Cape Town.
+    </p>
+  </div>
+
+  <div class="grid">
+    <!-- SERVICE 1 -->
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?w=600" alt="Everyday Laundry">
+      <div class="content">
+        <span class="tag">MOST POPULAR</span>
+        <h3 style="margin:8px 0;">Everyday Laundry</h3>
+        <p style="font-size:12px; color:#555; margin-bottom:10px;">
+          T-shirts, jeans, dresses, towels. Washed, dried & neatly folded.
+          Perfect for busy families.
+        </p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="price">From R60</span>
+          <small style="font-size:11px;">per kg • 24h turnaround</small>
+        </div>
+        <ul style="font-size:12px; color:#444; margin-top:10px; padding-left:16px;">
+          <li>Wash & Fold</li>
+          <li>Eco-friendly detergents</li>
+          <li>Free pickup & delivery</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SERVICE 2 -->
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=600" alt="Ironing">
+      <div class="content">
+        <span class="tag">SAME DAY</span>
+        <h3 style="margin:8px 0;">Ironing Service</h3>
+        <p style="font-size:12px; color:#555; margin-bottom:10px;">
+          Crisp, professional ironing for shirts, pants, uniforms and more.
+          No more wrinkles.
+        </p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="price">From R50</span>
+          <small style="font-size:11px;">per 10 items • Same day</small>
+        </div>
+        <ul style="font-size:12px; color:#444; margin-top:10px; padding-left:16px;">
+          <li>Steam ironing</li>
+          <li>Hanger or folded</li>
+          <li>Starch on request</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- SERVICE 3 -->
+    <div class="service-card">
+      <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=600" alt="Bedding">
+      <div class="content">
+        <span class="tag">DEEP CLEAN</span>
+        <h3 style="margin:8px 0;">Bedding & Linen</h3>
+        <p style="font-size:12px; color:#555; margin-bottom:10px;">
+          Duvets, blankets, sheets, pillows. Deep cleaned, fresh and fluffy.
+        </p>
+        <div style="display:flex; justify-content:space-between; align-items:center;">
+          <span class="price">From R80</span>
+          <small style="font-size:11px;">per set • 48h turnaround</small>
+        </div>
+        <ul style="font-size:12px; color:#444; margin-top:10px; padding-left:16px;">
+          <li>Anti-allergy wash</li>
+          <li>Large capacity machines</li>
+          <li>Fresh scent</li>
+        </ul>
+      </div>
+    </div>
