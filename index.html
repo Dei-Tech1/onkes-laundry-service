@@ -8,45 +8,43 @@
   <style>
     * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
     :root { --pink:#e91e7b; --navy:#0a2342; --bg:#f7f9ff; }
-    body { background:var(--bg); color:var(--navy); }
+    body { background:var(--bg); color:var(--navy); line-height:1.6; }
     nav {
       display:flex; justify-content:space-between; align-items:center;
       padding:12px 4%; background:#fff; position:sticky; top:0; z-index:99;
       box-shadow:0 2px 10px rgba(0,0,0,.06);
     }
     nav img { height:42px; }
-    .links { display:flex; gap:18px; font-size:13px; }
+    .links { display:flex; gap:20px; font-size:13px; }
     .links a { text-decoration:none; color:#333; font-weight:500; }
     .links a.active { color:var(--pink); border-bottom:2px solid var(--pink); }
     .btn {
-      background:var(--pink); color:#fff; padding:11px 18px;
+      background:var(--pink); color:#fff; padding:11px 20px;
       border-radius:999px; text-decoration:none; font-weight:700; font-size:13px;
+      display:inline-block;
+    }
+    .btn-outline {
+      border:1.5px solid var(--navy); padding:11px 20px; border-radius:999px;
+      text-decoration:none; color:var(--navy); font-weight:600; font-size:13px;
     }
     .hero {
       display:flex; flex-wrap:wrap; background:#fff;
-      align-items:center; padding-left:4%;
+      align-items:center; padding:30px 4%;
     }
-    .hero-left { flex:1; min-width:320px; padding:28px 0; }
-    .hero-left h1 { font-size:46px; line-height:.9; font-weight:800; }
+    .hero-left { flex:1; min-width:320px; }
+    .hero-left h1 { font-size:46px; line-height:.95; font-weight:800; }
     .hero-left h1 span { color:var(--pink); }
-    .hero-right { flex:1.2; min-width:340px; height:560px; }
-    .hero-right img { width:100%; height:100%; object-fit:cover; object-position:top; }
-    section { padding:40px 4%; }
-    .grid5 {
-      display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-      gap:12px; margin-top:16px;
-    }
-    .card {
-      background:#fff; border-radius:14px; padding:12px;
-      text-align:center; box-shadow:0 4px 14px rgba(0,0,0,.06);
-    }
-    .card img { width:100%; height:90px; object-fit:cover; border-radius:10px; }
+    .hero-right { flex:1; min-width:340px; text-align:center; }
+    .hero-right img { width:90%; max-width:480px; border-radius:20px; object-fit:cover; }
+    section { padding:50px 4%; }
+    .two-col { display:flex; flex-wrap:wrap; gap:30px; align-items:center; }
+    .two-col > div { flex:1; min-width:300px; }
+    .two-col img { width:100%; border-radius:16px; height:380px; object-fit:cover; }
     footer {
-      background:var(--navy); color:#fff; padding:22px 4%;
+      background:var(--navy); color:#fff; padding:24px 4%;
       display:flex; justify-content:space-between; flex-wrap:wrap; font-size:12px; gap:12px;
     }
     @media(max-width:800px){
-      .hero-right { height:380px; }
       .links { display:none; }
       .hero-left h1 { font-size:34px; }
     }
@@ -54,134 +52,71 @@
 </head>
 <body>
 
-  <!-- NAVBAR -->
+  <!-- NAV -->
   <nav>
     <img src="logo.png" alt="Onke's Laundry">
     <div class="links">
       <a class="active" href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact & Booking</a>
+      <a href="services.html">Services & Pricing</a>
+      <a href="contact.html">Contact</a>
     </div>
-    <a class="btn" href="https://wa.me/27XXXXXXXXX">💬 Book via WhatsApp</a>
+    <a class="btn" href="https://wa.me/27XXXXXXXXX">💬 WhatsApp</a>
   </nav>
 
   <!-- HERO -->
   <div class="hero">
     <div class="hero-left">
-      <p style="letter-spacing:3px; font-size:10px; font-weight:700;">
-        CLEANER CLOTHES • HAPPIER DAYS ———
+      <p style="letter-spacing:3px; font-size:11px; font-weight:700; color:var(--pink);">
+        WELCOME TO ONKE'S LAUNDRY • EST. CAPE TOWN
       </p>
       <h1>Onke's<br><span>Laundry Service</span></h1>
-      <p style="font-weight:700; margin:10px 0; font-size:18px;">
-        Fresh. Clean. Convenient.
+      <p style="font-size:16px; font-weight:600; margin:12px 0;">
+        Fresh. Clean. Convenient. Professional care you can trust.
       </p>
-      <p style="font-size:13px; color:#555; max-width:420px;">
-        Professional laundry services for homes, businesses and individuals.
-        We take care of your laundry, so you can focus on what matters most.
+      <p style="font-size:13px; color:#555; max-width:480px; margin-bottom:18px;">
+        We make laundry easy. Collection, washing, ironing and delivery —
+        all done with love and attention to detail.
       </p>
-
-      <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
-        <a class="btn" href="https://wa.me/27XXXXXXXXX">💬 Book via WhatsApp</a>
-        <a href="services.html" style="border:1.5px solid var(--navy); padding:11px 18px; border-radius:999px; text-decoration:none; color:var(--navy); font-weight:600; font-size:13px;">
-          View Our Services →
-        </a>
-      </div>
-
-      <div style="margin-top:20px; display:flex; gap:14px; font-size:11px; font-weight:600; flex-wrap:wrap;">
-        <span>🚚 Collection & Delivery</span>
-        <span>🌿 Quality Products</span>
-        <span>🛡️ Clean & Hygienic</span>
-        <span>⭐ Reliable</span>
-      </div>
+      <a class="btn" href="contact.html">Book Now</a>
+      <a class="btn-outline" href="services.html" style="margin-left:8px;">See Prices →</a>
     </div>
-
     <div class="hero-right">
-      <img src="hero.jpg" alt="Onke - Your Photo">
+      <img src="hero.jpg" alt="Onke - CEO">
     </div>
   </div>
 
-  <!-- SERVICES PREVIEW -->
-  <section>
-    <center>
-      <small style="letter-spacing:3px; font-weight:700;">OUR SERVICES</small>
-      <h2 style="font-size:32px; font-weight:800;">What We Do</h2>
-      <p style="font-size:13px; color:#666;">Quality laundry care for every need.</p>
-    </center>
-
-    <div class="grid5">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1582738411706-bfc8e691d1c2?w=400">
-        <b>Everyday Laundry</b><br>
-        <small>Clothes, towels, bedding.</small><br>
-        <b style="color:var(--pink);">From R60</b>
+  <!-- BUSINESS STORY -->
+  <section style="background:#fff;">
+    <div class="two-col">
+      <div>
+        <small style="letter-spacing:3px; font-weight:700; color:var(--pink);">OUR STORY</small>
+        <h2 style="font-size:32px; font-weight:800; margin:8px 0;">
+          About Onke's Laundry Service
+        </h2>
+        <p style="font-size:14px; color:#444; margin-bottom:12px;">
+          <b>Onke's Laundry Service</b> was born in Cape Town from a simple idea:
+          to give busy families, professionals and businesses back their time
+          while keeping their clothes fresh, clean and beautifully cared for.
+        </p>
+        <p style="font-size:13px; color:#555; margin-bottom:12px;">
+          We started small — washing for neighbours and friends — and grew through
+          word-of-mouth because we treat every item like our own. From everyday
+          wear to delicate fabrics, bedding, curtains and business uniforms,
+          we use quality, eco-friendly products and hygienic processes.
+        </p>
+        <p style="font-size:13px; color:#555;">
+          Today we serve homes and businesses across Cape Town and surroundings
+          with <b>free collection & delivery, same-day options, and affordable pricing</b>.
+          Our promise is simple: Reliable. Affordable. Always fresh.
+        </p>
+        <div style="margin-top:16px; display:flex; gap:20px; font-size:12px; font-weight:700;">
+          <span>✅ Eco-Friendly</span>
+          <span>✅ On Time</span>
+          <span>✅ Affordable</span>
+        </div>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400">
-        <b>Ironing Service</b><br>
-        <small>Crisp, neat, professional.</small><br>
-        <b style="color:var(--pink);">From R50</b>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?w=400">
-        <b>Bedding & Linen</b><br>
-        <small>Duvets, curtains, sheets.</small><br>
-        <b style="color:var(--pink);">From R80</b>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1584305574647-0cc949a2bb9f?w=400">
-        <b>Business Laundry</b><br>
-        <small>Uniforms, workwear, bulk.</small><br>
-        <b style="color:var(--pink);">R120</b>
-      </div>
-
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?w=400">
-        <b>Delicate Care</b><br>
-        <small>Special attention.</small><br>
-        <b style="color:var(--pink);">From R90</b>
+      <div>
+        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?w=600" alt="Laundry shop">
       </div>
     </div>
   </section>
-
-  <!-- HOW IT WORKS -->
-  <section style="background:var(--navy); color:#fff;">
-    <center>
-      <small style="color:#8ecbff; letter-spacing:3px;">HOW IT WORKS</small>
-      <h2 style="font-size:28px;">Simple & Convenient</h2>
-    </center>
-    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(160px,1fr)); gap:16px; margin-top:18px; font-size:13px;">
-      <div>① <b>Book</b><br><small style="color:#bcd;">WhatsApp us.</small></div>
-      <div>② <b>We Collect</b><br><small style="color:#bcd;">Pickup at your door.</small></div>
-      <div>③ <b>We Clean</b><br><small style="color:#bcd;">Wash, dry, iron.</small></div>
-      <div>④ <b>We Deliver</b><br><small style="color:#bcd;">Fresh back to you.</small></div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <div style="text-align:center; padding:36px 4%; background:#fff;">
-    <h2>Ready for Fresh, Clean Clothes?</h2>
-    <p style="font-size:13px;">Book via WhatsApp today.</p>
-    <br>
-    <a class="btn" href="https://wa.me/27XXXXXXXXX">💬 Book via WhatsApp</a>
-    <div style="margin-top:16px; display:flex; justify-content:center; gap:18px; font-size:11px; flex-wrap:wrap;">
-      <span>💬 WhatsApp: [Your Number]</span>
-      <span>📍 Cape Town</span>
-      <span>🕒 Mon - Sat 8AM-6PM</span>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
-  <footer>
-    <div><b style="color:#ff8fbc;">Onke's</b> LAUNDRY ©2026</div>
-    <div>
-      <a href="index.html" style="color:#ff8fbc;">Home</a> • 
-      <a href="services.html" style="color:#fff;">Services</a> • 
-      <a href="contact.html" style="color:#fff;">Contact</a>
-    </div>
-    <div>Cape Town, SA</div>
-  </footer>
-
-</body>
-</html>
